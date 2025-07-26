@@ -1,0 +1,13 @@
+button.toggle-menu-btn {
+  background-color: transparent; /* nền trong suốt */
+  border: none; /* bỏ viền */
+  cursor: pointer;
+  padding: 4px;
+  float: right; /* đẩy sang lề phải */
+}
+
+button.toggle-menu-btn img.headerImg {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
