@@ -1,76 +1,167 @@
 import React, { useState } from "react";
 import {
-  MailOutlined,
-  CalendarOutlined,
-  AppstoreOutlined,
-  SettingOutlined,
-  LinkOutlined,
+  FacebookFilled,
+  CalendarFilled,
+  AppstoreFilled,
+  SettingFilled,
+  LinkedinFilled,
+  SendOutlined,
 } from "@ant-design/icons";
-import { Divider, Layout, Menu, Switch } from "antd";
+import { Divider, Layout, Menu, Switch, Calendar, theme } from "antd";
 import context from "../context";
 import "../styles/siderbar.css";
+import useCalendarPanel from "../hooks/useCalendarPanel";
+
 function SiderBar() {
   const { Sider } = Layout;
+  const { token } = theme.useToken();
   const [mode, setMode] = useState("inline");
-  const [theme, setTheme] = useState("light");
-  const [openKeys, setOpenKeys] = useState(["sub1"]);
+  const [themeType, setThemeType] = useState("light");
+  const [openKeys, setOpenKeys] = useState([]);
   const [collapsed, setCollapsed] = useState(false);
+  const [selectedKey, setSelectedKey] = useState("1");
+
+  const { showCalendar, toggleCalendar, hideCalendar, onPanelChange } =
+    useCalendarPanel();
 
   const rootSubmenuKeys = ["sub1", "sub2"];
-
   const items = [
     {
       key: "1",
-      icon: <MailOutlined />,
+      icon: <FacebookFilled />,
       label: "Facebook",
     },
     {
       key: "2",
-      icon: <CalendarOutlined />,
-      label: "Calendar",
+      icon: <CalendarFilled />,
+      label: "Lịch",
     },
     {
       key: "sub1",
-      label: "Cultures",
-      icon: <AppstoreOutlined />,
+      label: "Văn hóa",
+      icon: <AppstoreFilled />,
       children: [
-        { key: "3", label: "Viet Nam" },
-        { key: "4", label: "English" },
-        { key: "5", label: "Korea" },
-        { key: "6", label: "China" },
-        { key: "7", label: "Japan" },
-        {
-          key: "sub1-2",
-          label: "Languages",
+        { key: "3", label: "Việt Nam" },
+        { key: "4", label: "Vương Quốc Anh" },
+        { key: "5", label: "Hàn Quốc" },
+        { key: "6", label: "Trung Quốc" },
+        { key: "7", label: "NHật Bản" },
+      ],
+    },
+    {
+          key: "sub5",
+          label: "Ngôn ngữ Việt Nam",
+          icon: (
+        <img 
+          src={context.contextImg.VietNam}
+          alt="Ngôn ngữ"
+          className="imgWorlds"
+        />
+      ),
           children: [
-            { key: "8", label: "Vietnamese" },
-            { key: "9", label: "English" },
-            { key: "10", label: "Korean" },
-            { key: "11", label: "Chinese" },
-            { key: "12", label: "Japanese" },
+            { key: "8", label: "Từ vựng" },
+            { key: "9", label: "Ngữ pháp" },
+            { key: "10", label: "Nghe" },
+            { key: "11", label: "Đọc" },
           ],
-        },
+    },
+    {
+          key: "sub6",
+          label: "Ngôn ngữ Anh",
+          icon: (
+        <img
+          src={context.contextImg.Enghlish}
+          alt="Ngôn ngữ"
+          className="imgWorlds"
+        />
+      ),
+          children: [
+            { key: "12", label: "Từ vựng" },
+            { key: "13", label: "Ngữ pháp" },
+            { key: "14", label: "Nghe" },
+            { key: "15", label: "Đọc" },
+          ],
+    },
+    {
+          key: "sub7",
+          label: "Ngôn ngữ Hàn Quốc",
+          icon: (
+        <img
+          src={context.contextImg.Korea}
+          alt="Ngôn ngữ"
+          className="imgWorlds"
+        />
+      ),
+          children: [
+            { key: "16", label: "Từ vựng" },
+            { key: "17", label: "Ngữ pháp" },
+            { key: "18", label: "Nghe" },
+            { key: "19", label: "Đọc" },
+          ],
+    },
+   {
+          key: "sub8",
+          label: "Ngôn ngữ Trung Quốc",
+          icon: (
+        <img
+          src={context.contextImg.China}
+          alt="Ngôn ngữ"
+          className="imgWorlds"
+        />
+      ),
+          children: [
+            { key: "20", label: "Từ vựng" },
+            { key: "21", label: "Ngữ pháp" },
+            { key: "22", label: "Nghe" },
+            { key: "23", label: "Đọc" },
+          ],
+    },
+    {
+          key: "sub9",
+          label: "Ngôn ngữ Nhật Bản",
+          icon: (
+        <img 
+          src={context.contextImg.Japan}
+          alt="Ngôn ngữ"
+          className="imgWorlds"
+        />
+      ),
+          children: [
+            { key: "24", label: "Từ vựng" },
+            { key: "25", label: "Ngữ pháp" },
+            { key: "26", label: "Nghe" },
+            { key: "27", label: "Đọc" },
+          ],
+    },
+    {
+      key: "sub3",
+      label: "Chủ đề nổi bậc",
+      icon: <SendOutlined />,
+      children: [
+        { key: "28", label: "Thành tựu nhân loại" },
+        { key: "29", label: "Văn hóa doanh nghiệp" },
+        { key: "30", label: "Văn hóa con người" },
+        { key: "31", label: "Thành tích nổi bậc" },
       ],
     },
     {
       key: "sub2",
-      label: "Setting",
-      icon: <SettingOutlined />,
+      label: "Cài đặt",
+      icon: <SettingFilled />,
       children: [
-        { key: "13", label: "Languages" },
-        { key: "14", label: "Styles" },
+        { key: "32", label: "Ngôn ngữ" },
       ],
     },
     {
       key: "link",
-      icon: <LinkOutlined />,
+      icon: <LinkedinFilled />,
       label: (
         <a
           href="http://nguyentronghuu.id.vn/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Contact
+          Thông tin thêm
         </a>
       ),
     },
@@ -81,16 +172,67 @@ function SiderBar() {
   };
 
   const changeTheme = (value) => {
-    setTheme(value ? "dark" : "light");
+    setThemeType(value ? "dark" : "light");
   };
 
   const onOpenChange = (keys) => {
     const latestOpenKey = keys.find((key) => !openKeys.includes(key));
+    console.log(
+      "keys:",
+      keys,
+      "prevOpenKeys:",
+      openKeys,
+      "latest:",
+      latestOpenKey
+    );
+
+    if (
+      keys.length === 0 ||
+      (latestOpenKey && latestOpenKey.startsWith("sub"))
+    ) {
+      hideCalendar();
+    }
     if (rootSubmenuKeys.includes(latestOpenKey)) {
       setOpenKeys([latestOpenKey]);
     } else {
       setOpenKeys(keys);
     }
+  };
+
+  const onMenuClick = ({ key }) => {
+    console.log("key", key);
+    if (key === "2") {
+      toggleCalendar();
+      setSelectedKey("2");
+    } else {
+      hideCalendar();
+      setSelectedKey(key);
+    }
+  };
+
+  const renderContent = () => {
+    if (showCalendar) {
+      return (
+        <div
+          className="calendarContainer"
+          style={{
+            border: `1px solid ${token.colorBorderSecondary}`,
+            borderRadius: token.borderRadiusLG,
+            backgroundColor: token.colorBorderSecondary,
+          }}
+        >
+          <Calendar
+            className="calendar"
+            fullscreen={false}
+            onPanelChange={onPanelChange}
+            style={{
+              backgroundColor: token.colorPrimaryTextHover,
+            }}
+          />
+        </div>
+      );
+    }
+    return null;
   };
 
   return (
@@ -109,10 +251,9 @@ function SiderBar() {
         >
           <img
             className="headerImg"
-            src={context.Menu}
+            src={context.contextImg.Menu}
             alt="Trang chủ vui vẻ"
           />
-          {/* {collapsed ? "Mở rộng" : "Thu gọn"} */}
         </button>
         <div style={{ width: "100%" }}>
           <Switch onChange={changeMode} /> Chế độ
@@ -121,13 +262,15 @@ function SiderBar() {
         </div>
         <Menu
           style={{ width: "100%" }}
-          selectedKeys={["1"]}
-          openKeys={collapsed ? [] : openKeys} // khi thu gọn thì đóng tất cả menu
+          selectedKeys={[selectedKey]}
+          openKeys={collapsed ? [] : openKeys}
           onOpenChange={onOpenChange}
+          onClick={onMenuClick}
           mode={mode}
-          theme={theme}
+          theme={themeType}
           items={items}
         />
+        {renderContent()}
       </div>
     </Sider>
   );

@@ -7,7 +7,7 @@ const { Header } = Layout;
 function HeaderComponents() {
   return (
     <Header className="header">
-      <img className="headerImg" src={context.HappyHome} alt="Trang chủ vui vẻ" />
+      <img className="headerImg" src={context.contextImg.HappyHome} alt="Trang chủ vui vẻ" />
       <div className="headerText">
         <h1>Home Page</h1>
       </div>
