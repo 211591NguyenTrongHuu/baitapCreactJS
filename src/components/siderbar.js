@@ -6,11 +6,13 @@ import {
   SettingFilled,
   LinkedinFilled,
   SendOutlined,
+  HomeOutlined,
 } from "@ant-design/icons";
 import { Divider, Layout, Menu, Switch, Calendar, theme } from "antd";
 import context from "../context";
 import "../styles/siderbar.css";
 import useCalendarPanel from "../hooks/useCalendarPanel";
+import { Link } from "react-router-dom";
 
 function SiderBar() {
   const { Sider } = Layout;
@@ -23,7 +25,13 @@ function SiderBar() {
 
   const { showCalendar, toggleCalendar, hideCalendar, onPanelChange } =
     useCalendarPanel();
+  const changeMode = (value) => {
+    setMode(value ? "vertical" : "inline");
+  };
 
+  const changeTheme = (value) => {
+    setThemeType(value ? "dark" : "light");
+  };
   const rootSubmenuKeys = ["sub1", "sub2"];
   const items = [
     {
@@ -145,11 +153,38 @@ function SiderBar() {
       ],
     },
     {
+    key: "sub10",
+     label: (
+      <Link to="/about" style={{ textDecoration: "none", color: "inherit" }}>
+        Về chúng tôi
+      </Link>
+    ),
+      icon: <HomeOutlined />,
+    },
+    {
       key: "sub2",
       label: "Cài đặt",
       icon: <SettingFilled />,
       children: [
-        { key: "32", label: "Ngôn ngữ" },
+        { key: "32", label: "Ngôn ngữ" ,
+        children: [
+    { key: "33", label: (<span className="switchTabContainer">
+      <div className="switchTaptext">Tiếng Việt Nam</div><Switch onChange={changeTheme} />
+    </span>)},
+    { key: "34", label: (<span className="switchTabContainer">
+      <div className="switchTaptext">Tiếng Hàn Quốc</div><Switch onChange={changeTheme} />
+    </span>)},
+    { key: "35", label: (<span className="switchTabContainer">
+      <div className="switchTaptext">Tiếng Nhật Bản</div><Switch onChange={changeTheme} />
+    </span>)},
+    { key: "36", label: (<span className="switchTabContainer">
+      <div className="switchTaptext">Tiếng Trung Quốc</div><Switch onChange={changeTheme} />
+    </span>)},
+    { key: "37", label: (<span className="switchTabContainer">
+      <div className="switchTaptext">Tiếng Anh</div><Switch className="switchTab" onChange={changeTheme} />
+    </span>)},
+        ],
+      },
       ],
     },
     {
@@ -166,15 +201,6 @@ function SiderBar() {
       ),
     },
   ];
-
-  const changeMode = (value) => {
-    setMode(value ? "vertical" : "inline");
-  };
-
-  const changeTheme = (value) => {
-    setThemeType(value ? "dark" : "light");
-  };
-
   const onOpenChange = (keys) => {
     const latestOpenKey = keys.find((key) => !openKeys.includes(key));
     console.log(
