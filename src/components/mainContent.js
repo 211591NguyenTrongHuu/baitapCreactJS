@@ -72,15 +72,7 @@ function ContentComponents() {
 
   return (
     <Content className="content">
-      {/* 👉 Điều khiển ở đầu */}
-      <div className="carousel-controls">
-        <Button onClick={prev} type="default" size="large">
-          ⟨ Trước
-        </Button>
-        <Button onClick={next} type="default" size="large">
-          Tiếp ⟩
-        </Button>
-      </div>
+      
 
       <Carousel
         ref={carouselRef}
@@ -112,6 +104,15 @@ function ContentComponents() {
           </div>
         ))}
       </Carousel>
+{/* 👉 Điều khiển ở đầu */}
+      <div className="carousel-controls">
+        <Button onClick={prev} type="default" size="large">
+          ⟨ Trước
+        </Button>
+        <Button onClick={next} type="default" size="large">
+          Tiếp ⟩
+        </Button>
+      </div>
     </Content>
   );
 }

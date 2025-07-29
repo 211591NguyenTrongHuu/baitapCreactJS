@@ -51,10 +51,10 @@ body,
   width: 100vw;
 }
 .carousel-controls {
-  position: absolute;
+  /* position: absolute;
   top: 20px;
   left: 0;
-  right: 0;
+  right: 0; */
   z-index: 1000;
   display: flex;
   justify-content: center;

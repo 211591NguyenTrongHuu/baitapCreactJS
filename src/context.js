@@ -14,6 +14,7 @@ import VideoChina from "./assets/video/VideoChina.mp4";
 import videoEnglish from "./assets/video/videoEnglish.mp4";
 import videoKorea from "./assets/video/videoKorea.mp4";
 import videoJapan from "./assets/video/videoJapan.mp4";
+import videoBell from "./assets/video/bell.mp4";
 const contextImg = {
   HappyHome,
   Facebook,
@@ -26,6 +27,7 @@ const contextImg = {
   Enghlish,
   Korea,
   Japan,
+
 };
 const contextVideo = {
   VideoVietNam,
@@ -33,5 +35,6 @@ VideoChina,
 videoJapan,
 videoKorea,
 videoEnglish,
+videoBell,
 };
 export default { contextImg, contextVideo};
