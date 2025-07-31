@@ -30,7 +30,7 @@ const contextImg = {
 
 };
 const contextVideo = {
-  VideoVietNam,
+VideoVietNam,
 VideoChina,
 videoJapan,
 videoKorea,
