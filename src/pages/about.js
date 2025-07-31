@@ -3,6 +3,7 @@ import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 // import './App.css';
 import Header from "../components/mainHeader";
 import Footer from "../components/footer";
+import Siderbar from "../components/siderbar";
 // function Profile(props) {
 // const navigate = useNavigate();
 //   // const [searchParams] = useSearchParams();
@@ -31,7 +32,8 @@ function About() {
   return (
     <div className="profile-container">
        <Header/>
-      <h1>Thông tin cá nhân</h1>
+       <Siderbar/>
+      {/* <h1>Thông tin cá nhân</h1>
       <div className="profile-card">
         <img
           src="https://via.placeholder.com/150"
@@ -44,7 +46,7 @@ function About() {
           <p><strong>Giới tính:</strong> Nam</p>
           <p><strong>Ngày sinh:</strong> 01/01/2000</p>
         </div>
-      </div>
+      </div> */}
       <Footer/>
     </div>
   );

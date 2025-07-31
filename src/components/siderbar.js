@@ -57,89 +57,89 @@ function SiderBar() {
       ],
     },
     {
-          key: "sub5",
-          label: "Ngôn ngữ Việt Nam",
-          icon: (
-        <img 
+      key: "sub5",
+      label: "Ngôn ngữ Việt Nam",
+      icon: (
+        <img
           src={context.contextImg.VietNam}
           alt="Ngôn ngữ"
           className="imgWorlds"
         />
       ),
-          children: [
-            { key: "8", label: "Từ vựng" },
-            { key: "9", label: "Ngữ pháp" },
-            { key: "10", label: "Nghe" },
-            { key: "11", label: "Đọc" },
-          ],
+      children: [
+        { key: "8", label: "Từ vựng" },
+        { key: "9", label: "Ngữ pháp" },
+        { key: "10", label: "Nghe" },
+        { key: "11", label: "Đọc" },
+      ],
     },
     {
-          key: "sub6",
-          label: "Ngôn ngữ Anh",
-          icon: (
+      key: "sub6",
+      label: "Ngôn ngữ Anh",
+      icon: (
         <img
           src={context.contextImg.Enghlish}
           alt="Ngôn ngữ"
           className="imgWorlds"
         />
       ),
-          children: [
-            { key: "12", label: "Từ vựng" },
-            { key: "13", label: "Ngữ pháp" },
-            { key: "14", label: "Nghe" },
-            { key: "15", label: "Đọc" },
-          ],
+      children: [
+        { key: "12", label: "Từ vựng" },
+        { key: "13", label: "Ngữ pháp" },
+        { key: "14", label: "Nghe" },
+        { key: "15", label: "Đọc" },
+      ],
     },
     {
-          key: "sub7",
-          label: "Ngôn ngữ Hàn Quốc",
-          icon: (
+      key: "sub7",
+      label: "Ngôn ngữ Hàn Quốc",
+      icon: (
         <img
           src={context.contextImg.Korea}
           alt="Ngôn ngữ"
           className="imgWorlds"
         />
       ),
-          children: [
-            { key: "16", label: "Từ vựng" },
-            { key: "17", label: "Ngữ pháp" },
-            { key: "18", label: "Nghe" },
-            { key: "19", label: "Đọc" },
-          ],
+      children: [
+        { key: "16", label: "Từ vựng" },
+        { key: "17", label: "Ngữ pháp" },
+        { key: "18", label: "Nghe" },
+        { key: "19", label: "Đọc" },
+      ],
     },
-   {
-          key: "sub8",
-          label: "Ngôn ngữ Trung Quốc",
-          icon: (
+    {
+      key: "sub8",
+      label: "Ngôn ngữ Trung Quốc",
+      icon: (
         <img
           src={context.contextImg.China}
           alt="Ngôn ngữ"
           className="imgWorlds"
         />
       ),
-          children: [
-            { key: "20", label: "Từ vựng" },
-            { key: "21", label: "Ngữ pháp" },
-            { key: "22", label: "Nghe" },
-            { key: "23", label: "Đọc" },
-          ],
+      children: [
+        { key: "20", label: "Từ vựng" },
+        { key: "21", label: "Ngữ pháp" },
+        { key: "22", label: "Nghe" },
+        { key: "23", label: "Đọc" },
+      ],
     },
     {
-          key: "sub9",
-          label: "Ngôn ngữ Nhật Bản",
-          icon: (
-        <img 
+      key: "sub9",
+      label: "Ngôn ngữ Nhật Bản",
+      icon: (
+        <img
           src={context.contextImg.Japan}
           alt="Ngôn ngữ"
           className="imgWorlds"
         />
       ),
-          children: [
-            { key: "24", label: "Từ vựng" },
-            { key: "25", label: "Ngữ pháp" },
-            { key: "26", label: "Nghe" },
-            { key: "27", label: "Đọc" },
-          ],
+      children: [
+        { key: "24", label: "Từ vựng" },
+        { key: "25", label: "Ngữ pháp" },
+        { key: "26", label: "Nghe" },
+        { key: "27", label: "Đọc" },
+      ],
     },
     {
       key: "sub3",
@@ -153,12 +153,12 @@ function SiderBar() {
       ],
     },
     {
-    key: "sub10",
-     label: (
-      <Link to="/about" style={{ textDecoration: "none", color: "inherit" }}>
-        Về chúng tôi
-      </Link>
-    ),
+      key: "sub10",
+      label: (
+        <Link to="/about" style={{ textDecoration: "none", color: "inherit" }}>
+          Về chúng tôi
+        </Link>
+      ),
       icon: <HomeOutlined />,
     },
     {
@@ -166,25 +166,57 @@ function SiderBar() {
       label: "Cài đặt",
       icon: <SettingFilled />,
       children: [
-        { key: "32", label: "Ngôn ngữ" ,
-        children: [
-    { key: "33", label: (<span className="switchTabContainer">
-      <div className="switchTaptext">Tiếng Việt Nam</div><Switch onChange={changeTheme} />
-    </span>)},
-    { key: "34", label: (<span className="switchTabContainer">
-      <div className="switchTaptext">Tiếng Hàn Quốc</div><Switch onChange={changeTheme} />
-    </span>)},
-    { key: "35", label: (<span className="switchTabContainer">
-      <div className="switchTaptext">Tiếng Nhật Bản</div><Switch onChange={changeTheme} />
-    </span>)},
-    { key: "36", label: (<span className="switchTabContainer">
-      <div className="switchTaptext">Tiếng Trung Quốc</div><Switch onChange={changeTheme} />
-    </span>)},
-    { key: "37", label: (<span className="switchTabContainer">
-      <div className="switchTaptext">Tiếng Anh</div><Switch className="switchTab" onChange={changeTheme} />
-    </span>)},
-        ],
-      },
+        {
+          key: "32",
+          label: "Ngôn ngữ",
+          children: [
+            {
+              key: "33",
+              label: (
+                <span className="switchTabContainer">
+                  <div className="switchTaptext">Tiếng Việt Nam</div>
+                  <Switch onChange={changeTheme} />
+                </span>
+              ),
+            },
+            {
+              key: "34",
+              label: (
+                <span className="switchTabContainer">
+                  <div className="switchTaptext">Tiếng Hàn Quốc</div>
+                  <Switch onChange={changeTheme} />
+                </span>
+              ),
+            },
+            {
+              key: "35",
+              label: (
+                <span className="switchTabContainer">
+                  <div className="switchTaptext">Tiếng Nhật Bản</div>
+                  <Switch onChange={changeTheme} />
+                </span>
+              ),
+            },
+            {
+              key: "36",
+              label: (
+                <span className="switchTabContainer">
+                  <div className="switchTaptext">Tiếng Trung Quốc</div>
+                  <Switch onChange={changeTheme} />
+                </span>
+              ),
+            },
+            {
+              key: "37",
+              label: (
+                <span className="switchTabContainer">
+                  <div className="switchTaptext">Tiếng Anh</div>
+                  <Switch className="switchTab" onChange={changeTheme} />
+                </span>
+              ),
+            },
+          ],
+        },
       ],
     },
     {
@@ -270,18 +302,22 @@ function SiderBar() {
       trigger={null}
       onCollapse={(value) => setCollapsed(value)}
     >
-      <div style={{ padding: 8 }}>
-        <button
-          className="toggle-menu-btn"
-          onClick={() => setCollapsed(!collapsed)}
+      <div>
+        <div
+          className={`menuContainer ${collapsed ? "collapsed" : "expanded"}`}
         >
-          <img
-            className="headerImg"
-            src={context.contextImg.Menu}
-            alt="Trang chủ vui vẻ"
-          />
-        </button>
-        <div style={{ width: "100%" }}>
+          <button
+            className={`toggle-menu-btn ${collapsed ? "collapsed" : "expanded"}`}
+            onClick={() => setCollapsed(!collapsed)}
+          >
+            <img
+              className="menuImg"
+              src={context.contextImg.Menu}
+              alt="Trang chủ vui vẻ"
+            />
+          </button>
+        </div>
+        <div style={{ width: "85%" }}>
           <Switch onChange={changeMode} /> Chế độ
           <Divider type="vertical" />
           <Switch onChange={changeTheme} /> Giao diện

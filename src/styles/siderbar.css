@@ -1,7 +1,42 @@
-button.toggle-menu-btn{background-color:transparent;border:none;cursor:pointer;padding:4px;float:right}
-button.toggle-menu-btn img.headerImg{width:24px;height:24px;object-fit:contain}
-.calendarContainer{margin-top:16; padding: 8;}
-.calendar{position:absolute;top:100px;left:380px;z-index:2;background-color: "#333"}
+.menuContainer {
+  display: flex;
+  transition: justify-content 0.3s ease;
+}
+.menuContainer.collapsed {
+  justify-content: initial;
+ justify-content: center;
+
+}
+.menuContainer.expanded {
+  justify-content: flex-end;  
+  position: absolute;
+  right: 0;
+}
+
+button.toggle-menu-btn{
+  background-color:transparent;
+  border:none;
+  cursor:pointer;
+
+}
+.menuImg{
+  background-color: rgb(73, 97, 255);
+  border: none;
+  padding: 2px 2px;
+  height: 40px;
+  border-radius: 6px;
+}
+.calendarContainer{
+  margin-top:16; 
+  padding: 8;
+}
+.calendar{
+  position:absolute;
+  top:100px;
+  left:380px;
+  z-index:2;
+  background-color: "#333" 
+}
 .imgWorlds{
   width: 20px;
   height: 20px; 

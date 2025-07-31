@@ -13,7 +13,6 @@ import {
   Badge,
 } from "antd";
 import "../styles/headerBar.css";
-import SearchComponents from "../components/search";
 import { BellFilled, BellOutlined, BellTwoTone } from "@ant-design/icons";
 import { UserOutlined } from "@ant-design/icons";
 const url =
@@ -44,7 +43,6 @@ function HeaderComponents() {
           </Header>
         </Col>
         <Col span={14} className="custom-search-container">
-          <SearchComponents />
         </Col>
         <Col span={4}>
           <Row>
