@@ -33,20 +33,6 @@ function About() {
     <div className="profile-container">
        <Header/>
        <Siderbar/>
-      {/* <h1>Thông tin cá nhân</h1>
-      <div className="profile-card">
-        <img
-          src="https://via.placeholder.com/150"
-          alt="Avatar"
-          className="profile-avatar"
-        />
-        <div className="profile-details">
-          <p><strong>Họ tên:</strong> Nguyễn Văn A</p>
-          <p><strong>Email:</strong> nguyenvana@example.com</p>
-          <p><strong>Giới tính:</strong> Nam</p>
-          <p><strong>Ngày sinh:</strong> 01/01/2000</p>
-        </div>
-      </div> */}
       <Footer/>
     </div>
   );

@@ -9,12 +9,14 @@ import China from "./assets/img/China.png";
 import Enghlish from "./assets/img/Enghlish.png";
 import Japan from "./assets/img/Japan.png";
 import Korea from "./assets/img/Korea.png";
+import Login from "./assets/img/Login.png";
 import VideoVietNam from "./assets/video/VideoVietNam.mp4";
 import VideoChina from "./assets/video/VideoChina.mp4";
 import videoEnglish from "./assets/video/videoEnglish.mp4";
 import videoKorea from "./assets/video/videoKorea.mp4";
 import videoJapan from "./assets/video/videoJapan.mp4";
 import videoBell from "./assets/video/bell.mp4";
+
 const contextImg = {
   HappyHome,
   Facebook,
@@ -27,7 +29,7 @@ const contextImg = {
   Enghlish,
   Korea,
   Japan,
-
+  Login,
 };
 const contextVideo = {
 VideoVietNam,
