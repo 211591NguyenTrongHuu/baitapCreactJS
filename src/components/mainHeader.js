@@ -4,23 +4,23 @@ import context from "../context";
 import {
   Layout,
   Button,
-  Divider,
   Tooltip,
   Col,
   Row,
   Space,
   Avatar,
   Badge,
+
 } from "antd";
 import "../styles/headerBar.css";
 import SearchComponents from "../components/search";
-import { BellFilled, BellOutlined, BellTwoTone } from "@ant-design/icons";
 import { UserOutlined } from "@ant-design/icons";
 const url =
   "https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg";
 const { Header } = Layout;
 const colors = ["blue"];
 function HeaderComponents() {
+  const isLogin = false;
   return (
     <>
       <Row className="header">
@@ -47,31 +47,31 @@ function HeaderComponents() {
           <SearchComponents />
         </Col>
         <Col span={4}>
-          <Row>
-            <Col span={8}>
-              <div className="bellContainer">
-                <Badge count={5} size="small" offset={[-3, 3]}>
-                  <video
-                    className="videoBell"
-                    autoPlay
-                    muted
-                    loop
-                    src={context.contextVideo.videoBell}
-                    alt="VideoBell"
-                  ></video>
-                </Badge>
-              </div>
-            </Col>
-            <Col span={14} className="langContainer">
-              <img
-                className="langImg"
-                src={context.contextImg.VietNam}
-                alt="vn"
-              ></img>
-              <div className="langText">Việt Nam</div>
-            </Col>
-            <Col span={2}>
-              <>
+          {isLogin ? (
+            <Row>
+              <Col span={8}>
+                <div className="bellContainer">
+                  <Badge count={5} size="small" offset={[-3, 3]}>
+                    <video
+                      className="videoBell"
+                      autoPlay
+                      muted
+                      loop
+                      src={context.contextVideo.videoBell}
+                      alt="VideoBell"
+                    ></video>
+                  </Badge>
+                </div>
+              </Col>
+              <Col span={14} className="langContainer">
+                <img
+                  className="langImg"
+                  src={context.contextImg.VietNam}
+                  alt="vn"
+                />
+                <div className="langText">Việt Nam</div>
+              </Col>
+              <Col span={2}>
                 <Space wrap>
                   {colors.map((color) => (
                     <Tooltip
@@ -88,9 +88,28 @@ function HeaderComponents() {
                     </Tooltip>
                   ))}
                 </Space>
-              </>
-            </Col>
-          </Row>
+              </Col>
+            </Row>
+          ) : (
+            <Row>
+              <Col span={6}>
+              </Col>
+              <Col span={10}>
+               <Button type="primary">
+                  <Link to="/register" className="login-link">
+                   Đăng ký
+                  </Link>
+                </Button>
+              </Col>
+                <Col span={8}>
+                <Button type="primary">
+                  <Link to="/login" className="login-link">
+                   Đăng nhập
+                  </Link>
+                </Button>
+              </Col>
+            </Row>
+          )}
         </Col>
       </Row>
     </>

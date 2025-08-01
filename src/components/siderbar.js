@@ -166,6 +166,23 @@ function SiderBar() {
       label: "Cài đặt",
       icon: <SettingFilled />,
       children: [
+        // {
+        //       <div style={{ width: "85%" }}>
+        //   <Switch onChange={changeMode} /> Chế độ
+        //   <Divider type="vertical" />
+        //   <Switch onChange={changeTheme} /> Giao diện
+        // </div>
+        // },
+        {
+          key: "mode-theme",
+          label: (
+            <div style={{ width: "100%" }}>
+              <Switch onChange={changeMode} /> Chế độ
+              <Divider type="vertical" />
+              <Switch onChange={changeTheme} /> Giao diện
+            </div>
+          ),
+        },
         {
           key: "32",
           label: "Ngôn ngữ",
@@ -307,7 +324,9 @@ function SiderBar() {
           className={`menuContainer ${collapsed ? "collapsed" : "expanded"}`}
         >
           <button
-            className={`toggle-menu-btn ${collapsed ? "collapsed" : "expanded"}`}
+            className={`toggle-menu-btn ${
+              collapsed ? "collapsed" : "expanded"
+            }`}
             onClick={() => setCollapsed(!collapsed)}
           >
             <img
@@ -317,11 +336,7 @@ function SiderBar() {
             />
           </button>
         </div>
-        <div style={{ width: "85%" }}>
-          <Switch onChange={changeMode} /> Chế độ
-          <Divider type="vertical" />
-          <Switch onChange={changeTheme} /> Giao diện
-        </div>
+
         <Menu
           style={{ width: "100%" }}
           selectedKeys={[selectedKey]}
