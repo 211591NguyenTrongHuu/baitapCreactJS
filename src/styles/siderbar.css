@@ -6,11 +6,10 @@
   justify-content: initial;
  justify-content: center;
 
+
 }
 .menuContainer.expanded {
   justify-content: flex-end;  
-  position: absolute;
-  right: 0;
 }
 
 button.toggle-menu-btn{
