@@ -1,17 +1,7 @@
 import { Link } from "react-router-dom";
 import "../styles/home.css";
 import context from "../context";
-import {
-  Layout,
-  Button,
-  Tooltip,
-  Col,
-  Row,
-  Space,
-  Avatar,
-  Badge,
-
-} from "antd";
+import { Layout, Button, Tooltip, Col, Row, Space, Avatar, Badge } from "antd";
 import "../styles/headerBar.css";
 import SearchComponents from "../components/search";
 import { UserOutlined } from "@ant-design/icons";
@@ -43,10 +33,10 @@ function HeaderComponents() {
             </div>
           </Header>
         </Col>
-        <Col span={14} className="custom-search-container">
+        <Col span={12} className="custom-search-container">
           <SearchComponents />
         </Col>
-        <Col span={4}>
+        <Col span={6}>
           {isLogin ? (
             <Row>
               <Col span={8}>
@@ -92,19 +82,18 @@ function HeaderComponents() {
             </Row>
           ) : (
             <Row>
-              <Col span={6}>
-              </Col>
+              <Col span={6}></Col>
               <Col span={10}>
-               <Button type="primary">
+                <Button type="primary">
                   <Link to="/register" className="login-link">
-                   Đăng ký
+                    Đăng ký
                   </Link>
                 </Button>
               </Col>
-                <Col span={8}>
+              <Col span={8}>
                 <Button type="primary">
                   <Link to="/login" className="login-link">
-                   Đăng nhập
+                    Đăng nhập
                   </Link>
                 </Button>
               </Col>
