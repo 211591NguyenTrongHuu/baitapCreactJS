@@ -10,6 +10,7 @@ import Enghlish from "./assets/img/Enghlish.png";
 import Japan from "./assets/img/Japan.png";
 import Korea from "./assets/img/Korea.png";
 import Login from "./assets/img/Login.png";
+import videoBackground from "./assets/video/background.mp4"
 import VideoVietNam from "./assets/video/VideoVietNam.mp4";
 import VideoChina from "./assets/video/VideoChina.mp4";
 import videoEnglish from "./assets/video/videoEnglish.mp4";
@@ -30,6 +31,7 @@ const contextImg = {
   Korea,
   Japan,
   Login,
+ 
 };
 const contextVideo = {
 VideoVietNam,
@@ -37,6 +39,7 @@ VideoChina,
 videoJapan,
 videoKorea,
 videoEnglish,
-videoBell,
+videoBell, 
+videoBackground,
 };
 export default { contextImg, contextVideo};

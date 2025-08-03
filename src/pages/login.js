@@ -29,6 +29,13 @@ function Login({ mode = "login" }) {
 
   return (
     <Row className="rowMainContainer">
+      <video
+    autoPlay
+    muted
+    loop
+    className="videoBackground"
+    src={context.contextVideo.videoBackground}
+  ></video>
       <Col span={12}>
         <div className="imgContainer">
           <img
@@ -38,9 +45,11 @@ function Login({ mode = "login" }) {
           />
         </div>
       </Col>
-      <Col span={12}>
-        <div className="titleContainer">Chào mừng bạn đến với TransCult!</div>
+      <Col span={12} >
+      <div className="loginFormContainer">
 
+      
+        <div className="titleContainer">Chào mừng bạn đến với TransCult!</div>
         <Form
           name="authForm"
           labelCol={{ span: 5 }}
@@ -120,7 +129,7 @@ function Login({ mode = "login" }) {
               </Button>
             </Form.Item>
           </div>
-        </Form>
+        </Form></div>
       </Col>
     </Row>
   );
