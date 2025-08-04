@@ -348,6 +348,24 @@ function SiderBar() {
           items={items}
         />
         {renderContent()}
+        {!collapsed && (
+          <div className="messagetext">
+            <a>Các thông điệp:</a>
+            <br />
+            <a>Một thế giới nhiều tiếng nói cùng chung một nhịp đập</a>
+            <br />
+            <a>Ngôn ngữ sống Văn hóa thật.</a>
+            <br />
+            <a>Nói. Hiểu. Gắn kết.</a>
+            <br />
+            <a>Hiểu văn hóa, hiểu con người.</a>
+            <br />
+            <a>Giữ gìn bản sắc Tôn trọng khác biệt Chung tay toàn cầu.</a>
+            <br />
+            <a>Văn hóa là hành trang, ngôn ngữ là chìa khóa.</a>
+            <br />
+          </div>
+        )}
       </div>
     </Sider>
   );

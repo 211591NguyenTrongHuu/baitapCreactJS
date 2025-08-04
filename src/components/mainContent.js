@@ -104,7 +104,6 @@ function ContentComponents() {
           </div>
         ))}
       </Carousel>
-{/* 👉 Điều khiển ở đầu */}
       <div className="carousel-controls">
         <Button onClick={prev} type="default" size="large">
           ⟨ Trước
