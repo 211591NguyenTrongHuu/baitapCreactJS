@@ -52,21 +52,20 @@ body,
   width: 100vw;
 }
 .carousel-controls {
-  /* position: absolute;
-  top: 20px;
-  left: 0;
-  right: 0; */
-  z-index: 1000;
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  width: calc(100% - 420px); /* giả sử sidebar rộng 200px */
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: 16px;
+  z-index: 1000;
 }
 
 .carousel-slide {
   height: 100vh;
   width: 100%;
 }
-
 .carousel-bg {
   height: 100vh;
   background-size: cover;
